@@ -1,5 +1,5 @@
-# Cómo Optimizar el Uso de  Claude
-### 18 pasos para aprovechar el 100% de su potencial
+# Cómo Optimizar el Uso de Claude
+### 14 recomendaciones para aprovechar el 100% de su potencial
 
 > La mayoría de quienes lo usan a diario todavía están aprovechando muy poco de lo que puede hacer. Acá te muestro cómo aprovechar toda su capacidad
 
@@ -20,11 +20,7 @@
 11. [Elimina el preámbulo](#11--elimina-el-preámbulo)
 12. [No te reexpliques en cada conversación](#12--no-te-reexpliques-en-cada-conversación)
 13. [Empieza un chat nuevo para un tema nuevo](#13--empieza-un-chat-nuevo-para-un-tema-nuevo)
-14. [Entiende cualquier cosa con el método Feynman](#14--entiende-cualquier-cosa-con-el-método-feynman)
-15. [Plan de viaje personalizado](#15--plan-de-viaje-personalizado)
-16. [Análisis de gastos mensuales](#16--análisis-de-gastos-mensuales)
-17. [Compañero de reflexión personal](#17--compañero-de-reflexión-personal)
-18. [Stress-test de ideas de negocio](#18--stress-test-de-ideas-de-negocio)
+14. [Usa un archivo de planificación en conversaciones complejas (Claude Code)](#14--usa-un-archivo-de-planificación-en-conversaciones-complejas-claude-code)
 
 ---
 
@@ -270,110 +266,44 @@ Claude lleva el contexto de todo lo dicho antes en una conversación. Cuando cam
 
 ---
 
-## Prompts listos para usar ahora mismo
+## Claude Code: nivel avanzado
 
-### 14 — Entiende cualquier cosa con el método Feynman
+### 14 — Usa un archivo de planificación en conversaciones complejas (Claude Code)
 
-Las explicaciones por defecto de Claude son técnicamente correctas y prácticamente inútiles. El método Feynman fuerza la comprensión a través de la simplicidad.
+Cuando trabajas en una tarea compleja con Claude Code — construir un feature, refactorizar un módulo, depurar algo con múltiples capas — el contexto se acumula y Claude puede perder el hilo de qué ya se resolvió, qué falta, y cuál es el siguiente paso real.
 
-```
-Explícame [tema] usando solo analogías y ejemplos cotidianos.
-Sin jerga. Asume que no tengo ningún conocimiento previo en este campo.
+La solución: pedirle que cree y mantenga un **archivo de planificación** dentro del mismo proyecto.
 
-Después de cada analogía, comprueba si realmente lo he entendido
-haciéndome una pregunta. Según mi respuesta, profundiza o ajusta la explicación.
-
-Sigue hasta que pueda explicártelo con mis propias palabras sin usar
-ningún término técnico.
-```
-
----
-
-### 15 — Plan de viaje personalizado
-
-La clave es darle información real sobre ti, no solo fechas y ubicaciones.
+**Al inicio de cualquier tarea compleja, usa este prompt:**
 
 ```
-Estoy planeando un viaje a [destino]. Estaré allí [número] días.
-Mi presupuesto es aproximadamente [cantidad] por día incluyendo alojamiento.
+Antes de empezar, crea un archivo llamado PLAN.md en la raíz del proyecto.
 
-Así es como viajo en realidad: [describe tu estilo — mañanas lentas o días
-llenos, lugares turísticos o locales, museos o comida, activo o relajado, etc.]
+En ese archivo escribe:
+- El objetivo principal de esta tarea
+- Los pasos necesarios para completarla, en orden
+- El estado actual de cada paso (pendiente / en progreso / completado)
+- Decisiones importantes tomadas y por qué
+- Bloqueos o incertidumbres activas
 
-Cosas que quiero evitar: [multitudes, trampas turísticas, restaurantes caros,
-tiempos de transporte largos, etc.]
-
-Hazme un itinerario día por día que se adapte a esto. Para cada día, incluye
-dónde quedarme, qué hacer, dónde comer y cualquier logística que deba saber.
-Señala todo lo que requiera reserva anticipada.
+Cada vez que completemos un paso o tomemos una decisión relevante,
+actualiza el archivo antes de continuar.
 ```
 
----
-
-### 16 — Análisis de gastos mensuales
-
-Convierte números brutos en un cuadro claro de a dónde va tu dinero y qué hacer al respecto.
+**Para retomar una sesión o abrir un chat nuevo sobre la misma tarea:**
 
 ```
-Voy a pegarte mis gastos del último mes. Analízalos y dime:
-
-1. En qué categorías estoy gastando más
-2. Dónde mi gasto parece inusual comparado con mis metas
-3. Qué podría recortar sin afectar significativamente mi vida
-4. En qué probablemente estoy gastando de menos que importa
-5. Un cambio específico que tendría el mayor impacto financiero
-
-Aquí están mis gastos: [pega tu estado de cuenta o lista de gastos]
-
-Mis metas financieras ahora mismo: [describe qué estás tratando de hacer]
+Lee el archivo PLAN.md y dime en qué punto estamos.
+Luego continúa desde donde lo dejamos.
 ```
 
----
+**Por qué funciona:**
+- Claude Code puede leer y escribir archivos directamente — el plan vive en el repositorio, no en el contexto del chat
+- Si el contexto se comprime o abres una sesión nueva, Claude puede retomar sin que tú reexpliques nada
+- El historial de decisiones queda documentado para ti y para cualquier colaborador
+- Funciona especialmente bien en tareas de más de una sesión o con múltiples subtareas
 
-### 17 — Compañero de reflexión personal
-
-```
-Quiero pensar en voz alta sobre algo. Tu trabajo no es darme consejos de inmediato.
-
-Primero, hazme preguntas para entender la situación completamente.
-Qué está pasando realmente, cómo me siento al respecto, qué he intentado
-ya y qué resultado espero.
-
-Después de que entiendas el panorama completo, refleja lo que estás escuchando —
-no solo los hechos sino lo que parece estar debajo de ellos.
-
-Luego, y solo entonces, ofrece tu perspectiva. Sé honesto, no tranquilizador.
-Dime lo que realmente piensas, incluyendo lo que quizás no quiero escuchar.
-
-Esto es lo que tengo en mente: [describe lo que quieres pensar]
-```
-
----
-
-### 18 — Stress-test de ideas de negocio
-
-La mayoría de ideas de negocio mueren porque la gente se enamora de ellas antes de probarlas. Claude puede actuar como un primer filtro implacable.
-
-```
-Tengo una idea de negocio que quiero someter a prueba antes de invertir
-tiempo serio en ella.
-
-Aquí está la idea: [descríbela en detalle — qué es, para quién es,
-cómo genera dinero, por qué crees que funciona]
-
-Tu trabajo es encontrar todo lo que está mal con ella. Específicamente:
-
-1. Qué suposiciones estoy haciendo que podrían estar equivocadas
-2. Quién ya hace esto y por qué podría ganarme
-3. Por qué el cliente objetivo podría no pagar por esto
-4. Qué tendría que ser verdad para que esto funcionara, y qué tan probable es eso
-5. El único mayor problema con esta idea
-
-Sé específico. Los riesgos genéricos como "el mercado quizás no esté listo"
-no son útiles. Dame la versión real de cada problema.
-
-Después de eso, dime cómo tendría que verse la idea para funcionar realmente.
-```
+**Variante para proyectos más grandes:** usa `PLAN.md` como índice y crea archivos separados por módulo o fase — por ejemplo `PLAN_auth.md`, `PLAN_api.md`. Pídele a Claude que los mantenga actualizados al mismo tiempo.
 
 ---
 
