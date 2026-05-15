@@ -1,7 +1,7 @@
-# Cómo Usar Claude de Verdad
+# Cómo Optimizar el Uso de  Claude
 ### 18 pasos para aprovechar el 100% de su potencial
 
-> Claude lleva dos años disponible. La mayoría de quienes lo usan a diario todavía están aprovechando el 10% de lo que puede hacer. No porque sea complicado — sino porque nadie les mostró cómo se ve el otro 90%.
+> La mayoría de quienes lo usan a diario todavía están aprovechando muy poco de lo que puede hacer. Acá te muestro cómo aprovechar toda su capacidad
 
 ---
 
